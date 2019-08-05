@@ -21,21 +21,23 @@ module.exports = function (config) {
       reports: ['html', 'lcovonly', 'text-summary'],
       fixWebpackSourcePaths: true
     },
-     sonarqubeReporter: {
-     basePath: 'src/app',        
-     filePattern: '**/*spec.ts', 
-     encoding: 'utf-8',          
-     outputFolder: 'reports',    
-     legacyMode: false,          
-     reportName: (metadata) => {return metadata.concat('xml').join('.');}
-                  }
+      sonarqubeReporter: {
+      basePath: 'src/app',
+      outputFolder: 'reports',
+      filePattern: '**/*spec.ts',
+      encoding: 'utf-8',
+      legacyMode: false,
+      reportName: (metadata) => {
+        return metadata.concat('xml').join('.');
+      }
+    },
     reporters: ['progress', 'kjhtml', 'sonarqube'],
     port: 9876,
     colors: true,
     logLevel: config.LOG_INFO,
     autoWatch: true,
     browsers: ['Chrome'],
-    singleRun: true,
+    singleRun: false,
     restartOnFileChange: true
   });
 };
