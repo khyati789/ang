@@ -29,7 +29,7 @@ module.exports = function (config) {
      legacyMode: false,          
      reportName: (metadata) => {return metadata.concat('xml').join('.');}
                   }
-    reporters: ['progress', 'kjhtml','sonarqube'],
+    reporters: ['progress', 'kjhtml', 'sonarqube'],
     port: 9876,
     colors: true,
     logLevel: config.LOG_INFO,
