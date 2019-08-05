@@ -27,7 +27,7 @@ module.exports = function (config) {
      encoding: 'utf-8',          
      outputFolder: 'reports',    
      legacyMode: false,          
-     reportName: (metadata=> {return metadata.concat('xml').join('.');}
+     reportName: (metadata) => {return metadata.concat('xml').join('.');}
                   }
     reporters: ['progress', 'kjhtml','sonarqube'],
     port: 9876,
