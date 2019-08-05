@@ -22,14 +22,14 @@ module.exports = function (config) {
       fixWebpackSourcePaths: true
     },
      sonarqubeReporter: {
-  basePath: 'src/app',        // test files folder
-  filePattern: '**/*spec.ts', // test files glob pattern
-  encoding: 'utf-8',          // test files encoding
-  outputFolder: 'reports',    // report destination
-  legacyMode: false,          // report for Sonarqube < 6.2 (disabled)
-  reportName: (metadata
-    },
-    reporters: ['progress', 'kjhtml'],
+     basePath: 'src/app',        
+     filePattern: '**/*spec.ts', 
+     encoding: 'utf-8',          
+     outputFolder: 'reports',    
+     legacyMode: false,          
+     reportName: (metadata=> {return metadata.concat('xml').join('.');}
+                  }
+    reporters: ['progress', 'kjhtml','sonarqube'],
     port: 9876,
     colors: true,
     logLevel: config.LOG_INFO,
