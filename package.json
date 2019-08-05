@@ -22,7 +22,12 @@
     "@angular/router": "~8.1.2",
     "rxjs": "~6.4.0",
     "tslib": "^1.9.0",
-    "zone.js": "~0.9.1"
+    "zone.js": "~0.9.1",
+    "clone-regexp": "^1.0.1",
+    "glob": "^7.1.2",
+    "js2xmlparser": "^3.0.0",
+    "mkdirp": "^0.5.1",
+    "winston": "^3.0.0"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.801.2",
@@ -44,6 +49,12 @@
     "protractor": "~5.4.0",
     "ts-node": "~7.0.0",
     "tslint": "~5.15.0",
-    "typescript": "~3.4.3"
+    "typescript": "~3.4.3","chai-xml": "^0.3.2",
+    "coveralls": "^3.0.2",
+    "jasmine": "^3.1.0",
+    "lodash": "^4.17.11",
+    "mock-require": "^3.0.2",
+    "nyc": "^14.1.1",
+    "rimraf": "^2.6.2"
   }
 }
